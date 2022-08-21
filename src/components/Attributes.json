@@ -1,0 +1,35 @@
+{
+  "movie": [
+    { "commonTerm": "Movie by Title", "searchTerm": "genreIndex" },
+    { "commonTerm": "Movie by Actor", "searchTerm": "actorTerm" },
+    { "commonTerm": "Movie by Genre", "searchTerm": "featureFilmTerm" },
+    { "commonTerm": "Movie by Director", "searchTerm": "directorTerm" }
+  ],
+  "podcast": [
+    { "commonTerm": "Podcast by Title", "searchTerm": "titleTerm" },
+    { "commonTerm": "Podcast by Author", "searchTerm": "authorTerm" },
+    { "commonTerm": "Podcast by Genre", "searchTerm": "genreIndex" },
+    { "commonTerm": "Podcast by Language", "searchTerm": "glanguageTerm" }
+  ],
+  "music": [
+    { "commonTerm": "Music by Song", "searchTerm": "songTerm" },
+    { "commonTerm": "Music by Artist", "searchTerm": "artistTerm" },
+    { "commonTerm": "Music by Genre", "searchTerm": "genreIndex" },
+    { "commonTerm": "Music by Album", "searchTerm": "albumTerm" }
+  ],
+  "audiobook": [
+    { "commonTerm": "Books by Title", "searchTerm": "genreIndex" },
+    { "commonTerm": "Books by Author", "searchTerm": "authorTerm" },
+    { "commonTerm": "Books by Genre", "searchTerm": "titleTerm" }
+  ],
+  "shortFilm": [
+    { "commonTerm": "Films by Title", "searchTerm": "shortFilmTerm" },
+    { "commonTerm": "Films by Director", "searchTerm": "artistTerm" },
+    { "commonTerm": "Films by Genre", "searchTerm": "genreIndex" }
+  ],
+  "tvShow": [
+    { "commonTerm": "Shows by Title", "searchTerm": "showTerm" },
+    { "commonTerm": "Shows by Genre", "searchTerm": "genreIndex" }
+  ],
+  "other": [{ "commonTerm": "General search", "searchTerm": "" }]
+}
