@@ -1,10 +1,15 @@
-import { Container, Nav, Col, Row, Form } from "react-bootstrap";
+import { Container, Nav, Col, Row, Form, Button } from "react-bootstrap";
 import SelectorMenu from "./SelectorMenu.js";
 
 //function returns a navigation bar at the top of the page
 //input for search updates value on change
-//attribute selection menu is a separate component that renders differently for each media type
+//SelectorMenu is a separate component that renders a different list of options
+//depending on the media type
 function Navigation(props) {
+  function searchButtonClick() {
+    props.setClicker(props.clicker + 1);
+  }
+
   return (
     <Container className="pt-4 border rounded mx-auto my-3">
       <Row className="mb-4">
@@ -16,6 +21,9 @@ function Navigation(props) {
             mediaType={props.mediaType}
             setAttribute={props.setAttribute}
           />
+        </Col>
+        <Col sm={2}>
+          <Button onClick={() => searchButtonClick()}>Search</Button>
         </Col>
       </Row>
       <Nav fill variant="tabs" defaultActiveKey="/all">

@@ -2,12 +2,12 @@ import { useEffect } from "react";
 import { Container, Table, Button } from "react-bootstrap";
 import React from "react";
 
-//function renders a list of the search results
-//music and books are called with this layout
+//Function renders a list style layout of the search specified in the Navigation bar
+//The media type of Music, audiobook and Ebook are rendered in this component
 function List(props) {
   const [searchResults, setSearchResults] = React.useState();
 
-  //useEffect makes a get request to the server
+  //useEffect makes a get request to the Express server
   //function runs whenever the search values are updated
   useEffect(() => {
     function runFetch() {
@@ -24,11 +24,10 @@ function List(props) {
         .then((response) => response.json())
         .then((data) => {
           setSearchResults(data.results);
-          console.log(data.results);
         });
     }
     runFetch();
-  }, [props.mediaType, props.searchTerm, props.attribute, props.limit]);
+  }, [props.clicker]);
 
   //function saves the object to the favourites array
   function addToFavourites(media) {
@@ -42,6 +41,7 @@ function List(props) {
   }
 
   //render maps the results of the search in a table format
+  //function maps the results from the fetch request
   return (
     <Container className="bg-info rounded">
       <h1 className="text-start text-light">Hello {props.mediaType}</h1>

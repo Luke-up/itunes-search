@@ -16,7 +16,7 @@ function Rectangle(props) {
   }
 
   //useEffect contains function to make get request
-  //useEffect runs whenever search terms are altered
+  //useEffect runs whenever search button is clicked
   useEffect(() => {
     function runFetch() {
       fetch(
@@ -35,7 +35,7 @@ function Rectangle(props) {
         });
     }
     runFetch();
-  }, [props.mediaType, props.searchTerm, props.attribute, props.limit]);
+  }, [props.clicker]);
 
   //function pushes an object to the favourites array
   function addToFavourites(media) {

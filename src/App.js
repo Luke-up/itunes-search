@@ -7,6 +7,7 @@ function App() {
   const [mediaType, setMediaType] = React.useState("movie");
   const [searchTerm, setSearchTerm] = React.useState("Lucy");
   const [attribute, setAttribute] = React.useState("other");
+  const [clicker, setClicker] = React.useState(0);
 
   //function returns two components
   //navigation at the top
@@ -18,11 +19,14 @@ function App() {
         setMediaType={setMediaType}
         setSearchTerm={setSearchTerm}
         mediaType={mediaType}
+        setClicker={setClicker}
+        clicker={clicker}
       />
       <DisplayArea
         attribute={attribute}
         mediaType={mediaType}
         searchTerm={searchTerm}
+        clicker={clicker}
       />
     </div>
   );

@@ -8,7 +8,7 @@ function Square(props) {
   const [searchResults, setSearchResults] = React.useState();
 
   //useEffect sends a get request to server
-  //useEffect will run when search values are updated
+  //useEffect runs whenever search button is clicked
   useEffect(() => {
     function runFetch() {
       fetch(
@@ -27,7 +27,7 @@ function Square(props) {
         });
     }
     runFetch();
-  }, [props.mediaType, props.searchTerm, props.attribute, props.limit]);
+  }, [props.clicker]);
 
   //function will add the current object to an array of favourites
   function addToFavourites(media) {

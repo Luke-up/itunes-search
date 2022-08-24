@@ -17,6 +17,7 @@ function AllPage(props) {
             limit={3}
             setFavourites={props.setFavourites}
             favourites={props.favourites}
+            clicker={props.clicker}
           />
         </Col>
         <Col lg={6}>
@@ -27,6 +28,7 @@ function AllPage(props) {
             limit={4}
             setFavourites={props.setFavourites}
             favourites={props.favourites}
+            clicker={props.clicker}
           />
         </Col>
       </Row>
@@ -39,6 +41,7 @@ function AllPage(props) {
             limit={4}
             setFavourites={props.setFavourites}
             favourites={props.favourites}
+            clicker={props.clicker}
           />
         </Col>
         <Col lg={6}>
@@ -49,6 +52,7 @@ function AllPage(props) {
             limit={4}
             setFavourites={props.setFavourites}
             favourites={props.favourites}
+            clicker={props.clicker}
           />
         </Col>
       </Row>
@@ -61,6 +65,7 @@ function AllPage(props) {
             limit={3}
             setFavourites={props.setFavourites}
             favourites={props.favourites}
+            clicker={props.clicker}
           />
         </Col>
         <Col lg={6}>
@@ -71,6 +76,7 @@ function AllPage(props) {
             limit={3}
             setFavourites={props.setFavourites}
             favourites={props.favourites}
+            clicker={props.clicker}
           />
         </Col>
       </Row>
@@ -83,6 +89,7 @@ function AllPage(props) {
             limit={4}
             setFavourites={props.setFavourites}
             favourites={props.favourites}
+            clicker={props.clicker}
           />
         </Col>
         <Col lg={6}>
@@ -93,6 +100,7 @@ function AllPage(props) {
             limit={4}
             setFavourites={props.setFavourites}
             favourites={props.favourites}
+            clicker={props.clicker}
           />
         </Col>
       </Row>

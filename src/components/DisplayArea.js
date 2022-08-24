@@ -6,21 +6,25 @@ import List from "./List.js";
 import Favourites from "./Favourites.js";
 import AllPage from "./AllPage.js";
 
-//function display different media using different functional components
+//function returns the results of Navigation bar search
 function DisplayArea(props) {
-  //favourites list collect array of items that are liked
+  //Favourites array contains array of objects
+  //Add button is rendered alongside search result
   const [favourites, setFavourites] = React.useState([]);
 
-  //the all screen has its own layout
+  //All display renders each other component multiple times on the same screen
+  //All display makes an individual fetch request for each type of media
   if (props.mediaType === "all") {
     return (
       <AllPage
         searchTerm={props.searchTerm}
         setFavourites={setFavourites}
         favourites={favourites}
+        clicker={props.clicker}
       />
     );
-  } //movie type searches are laid out in a grid of rectangular cards
+  } //Statement will conditionally render if corresponding media type is selected on navigation bar
+  //These media types will be rendered in the Rectangle shaped Card style
   else if (
     props.mediaType === "movie" ||
     props.mediaType === "shortFilm" ||
@@ -35,10 +39,12 @@ function DisplayArea(props) {
           limit={12}
           setFavourites={setFavourites}
           favourites={favourites}
+          clicker={props.clicker}
         />
       </Container>
     );
-  } //podcasts and apps are laid out in square cards aligned in a grid
+  } //Statement will conditionally render if corresponding media type is selected on navigation bar
+  //These media types will be rendered in the Square shaped Card style
   else if (props.mediaType === "podcast" || props.mediaType === "software") {
     return (
       <Container>
@@ -49,10 +55,12 @@ function DisplayArea(props) {
           limit={12}
           setFavourites={setFavourites}
           favourites={favourites}
+          clicker={props.clicker}
         />
       </Container>
     );
-  } //music and books are laid out in a list
+  } //Statement will conditionally render if corresponding media type is selected on navigation bar
+  //These media types will be rendered in the List style
   else if (
     props.mediaType === "music" ||
     props.mediaType === "audiobook" ||
@@ -67,10 +75,11 @@ function DisplayArea(props) {
           limit={12}
           setFavourites={setFavourites}
           favourites={favourites}
+          clicker={props.clicker}
         />
       </Container>
     );
-  } //favourites list has its own layout
+  } //Statement will conditionally render if 'favourites' is selected on navigation bar
   else {
     return (
       <Container>

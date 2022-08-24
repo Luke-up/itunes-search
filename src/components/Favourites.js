@@ -1,7 +1,7 @@
 import { Container, Table, Button } from "react-bootstrap";
 import React from "react";
 
-//function renders a list of all the items previously favourited
+//Component renders the contents of Favourites array in the DisplayArea component
 function Favourites(props) {
   //function removes an item from the array of favourites
   function removeFavourites(id) {
