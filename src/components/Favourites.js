@@ -14,7 +14,7 @@ function Favourites(props) {
 
   return (
     <Container className="bg-info rounded">
-      <h1 className="text-start text-light">Hello favourties</h1>
+      <h1 className="text-start text-light">Hello favourites</h1>
 
       {props.favourites ? (
         <Table striped hover className="border text-start">
